@@ -1574,9 +1574,31 @@ The sidebars are used in almost all the pages in WPLMS. Although sidebars are co
 
 <div class="bs-docs-section">
   <h1 id="wplms-translation" class="page-header">WPLMS Translation Guide</h1>
-  <div class="fitvids">
-   <iframe width="420" height="315" src="http://www.youtube.com/embed/tC6z0uN7FK0" frameborder="0" allowfullscreen></iframe>
-  </div>
+  <p>WPLMS Recommends Using Loco translator plugin for translation.</p>
+  <ul>
+   <li><a href="http://vibethemes.com/documentation/wplms/knowledge-base/translate-using-loco-translate-plugin/">WPLMS Translation Guide</a></li>
+   <li><a href="http://vibethemes.com/documentation/wplms/knowledge-base/buddy-press-translation-using-loco-translator/">Buddypress Translation Guide</a></li>
+   <li><a href="http://vibethemes.com/documentation/wplms/knowledge-base/retain-translation-after-update-and-fix-translation-issues-after-update-guide-by-wplms/">Retain Translation After Update Guide</a></li>
+   <li><a href="http://vibethemes.com/documentation/wplms/wp-content/uploads/2017/01/loco-translate.2.0.11.zip">Download Loco Translator</a></li>
+  </ul>
+  <p>Important Notes Regarding Translation.</p>
+  <ul>
+     <li>WordPress changed the way how it manages the translation files in 4.6 Update. Prior to 4.6 version of wordpress style of naming the translation files was  “xx_XX.po/mo” but now they have changed it to “text_domain-xx_XX.po/mo”. So, we also had to change the way how we do it in our theme update “WPLMS 2.3″to make it compatible with wordpress 4.6 and up.Please note the Code Styling won’t work for wordpress 4.6 and above.</li>
+     <li>If you are translating any string with Variables like %s, %d, Then You need to follow this guide. <a href"https://developer.wordpress.org/themes/functionality/internationalization/#variables">Link</a></li>
+     <li>Location Priority of translation files in our themes.</li>
+        <ol>
+          <li>Global Folder : Our theme loads the Translation files located in the global folder.</li>
+            <ul>
+              <li>System : wp-content/languages/plugins/’textdomain’-xx_XX.po</li>
+              <li>System : wp-content/languages/themes/’textdomain’-xx_XX.po</li>
+            </ul>
+          <li>Local Folder : Our theme loads the Translation files located in the local foder.</li>
+            <ul>
+              <li>Author : wp-content/themes/themename/languages/’textdomain’-xx_XX.po mo</li>
+              <li>Author : wp-content/plugins/pluginname/languages/’textdomain’-xx_XX.po mo</li>
+            </ul>
+        </ol>
+    </ul>
 </div>
 <div class="bs-docs-section">
   <h1 id="wplms-events" class="page-header">WPLMS Events Guide</h1>
